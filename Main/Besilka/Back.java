@@ -70,7 +70,10 @@ public class Back {
 				}
 			}
 			System.out.println(Nov);
+			
 		}
+		if (Zbor.equals(Nov))
+			System.exit(1);
 	}
 	
 	

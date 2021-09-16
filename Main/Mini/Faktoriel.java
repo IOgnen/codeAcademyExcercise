@@ -12,11 +12,13 @@ public class Faktoriel {
 		Scanner vnes = new Scanner(System.in);
 		int y = vnes.nextInt();
 		
+		
 		for (x=1 ; x<=y ; x++) {
 			f = f * x;
 		}
 			
 		System.out.print("Faktoriel od brojot: ");
 		System.out.println(f);
+
 	}
 }
