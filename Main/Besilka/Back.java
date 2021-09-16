@@ -13,12 +13,11 @@ public class Back {
 	public void start() {
 		Scanner vnes = new Scanner(System.in);
 
-		System.out.print("Vneste broj na zivoti: ");
-		x = vnes.nextInt();
+		System.out.println("Zivoti: 10");
 
 		Back besilka = new Back();
 
-		besilka.setZivoti(x);
+		besilka.setZivoti(10);
 
 		System.out.print("Vnesete zbor: ");
 		Zbor = vnes.next();
