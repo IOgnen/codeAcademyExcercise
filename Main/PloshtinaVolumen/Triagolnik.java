@@ -1,10 +1,11 @@
 package PloshtinaVolumen;
 
 public class Triagolnik extends Shape {
-	
-	int a;
-	int b;
-	int c;
+
+	private int a;
+	private int b;
+	private int c;
+
 	public Triagolnik(int a, int b, int c) {
 		this.a = a;
 		this.b = b;
@@ -18,7 +19,7 @@ public class Triagolnik extends Shape {
 
 	@Override
 	public String getSides() {
-		String s = String.valueOf(a)+" "+String.valueOf(b)+ " "+String.valueOf(c);
+		String s = String.valueOf(a) + " " + String.valueOf(b) + " " + String.valueOf(c);
 		return s;
 	}
 

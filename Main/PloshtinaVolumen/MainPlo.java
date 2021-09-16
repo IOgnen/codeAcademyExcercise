@@ -7,16 +7,16 @@ import java.util.Random;
 public class MainPlo {
 	public static void main(String[] args) {
 		
-		List<Shape> formi = new ArrayList();
+		List<Shape> forms = new ArrayList();
 		
 		Random r = new Random();
 		
 		for (int i = 0; i < 10; i++) {
-			formi.add(new Triagolnik(r.nextInt(10),r.nextInt(10),r.nextInt(10)));
+			forms.add(new Triagolnik(r.nextInt(10),r.nextInt(10),r.nextInt(10)));
 		}
 		
 		
-		formi.forEach(forma -> {
+		forms.forEach(forma -> {
 			System.out.println(forma.getClassName() + " so strani: " + forma.getSides() + " e: "
 					+ forma.Ploshtina() + " a Perimetarot e: " + forma.Perimetar());
 		});

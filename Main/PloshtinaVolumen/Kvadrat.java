@@ -2,8 +2,8 @@ package PloshtinaVolumen;
 
 public class Kvadrat extends Shape {
 
-	int a;
-	int b;
+	private int a;
+	private int b;
 
 	public Kvadrat(int a, int b) {
 		this.a = a;
