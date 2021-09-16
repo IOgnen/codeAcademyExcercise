@@ -18,6 +18,7 @@ public class MainPlo {
 			System.out.println(Forma[i].getClassName() + " so strani: " + Forma[i].getSides() + " e: "
 					+ Forma[i].Ploshtina() + " a Perimetarot e: " + Forma[i].Perimetar());
 		}
+		
 
 	}
-}
+} 
