@@ -1,8 +1,8 @@
-package Besilka;
+package besilka;
 
 import java.util.Scanner;
 
-public class Back {
+public class Besilka {
 	public int Zivoti;
 	public String Zbor;
 	public String Nov = "";
@@ -15,7 +15,7 @@ public class Back {
 
 		System.out.println("Zivoti: 10");
 
-		Back besilka = new Back();
+		Besilka besilka = new Besilka();
 
 		besilka.setZivoti(10);
 

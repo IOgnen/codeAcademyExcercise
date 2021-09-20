@@ -1,5 +1,6 @@
 package PloshtinaVolumen;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -11,8 +12,9 @@ public class MainPlo {
 		
 		Random r = new Random();
 		
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 5; i++) {
 			forms.add(new Triagolnik(r.nextInt(10),r.nextInt(10),r.nextInt(10)));
+			forms.add(new Kvadrat(r.nextInt(10),r.nextInt(10)));
 		}
 		
 		

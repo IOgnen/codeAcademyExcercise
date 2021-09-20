@@ -4,7 +4,7 @@ public class Triagolnik extends Shape {
 
 	private int a;
 	private int b;
-	private int c;
+	int c;
 
 	public Triagolnik(int a, int b, int c) {
 		this.a = a;
@@ -14,7 +14,7 @@ public class Triagolnik extends Shape {
 
 	@Override
 	public String getClassName() {
-		return "Triagolnikot";
+		return "Triagolni";
 	}
 
 	@Override
