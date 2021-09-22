@@ -3,11 +3,16 @@ package Edukacija;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subject extends Student {
+public class Subject {
 	
 	String predmet;
 	int ocenka;
+	int najgolema;
 
+	public Subject() {
+		
+	}
+	
 	public Subject(String y) {
 		this.predmet = y;
 	}
@@ -16,7 +21,18 @@ public class Subject extends Student {
 		this.ocenka = i;
 	}
 	
-	public void addPredmet() {
+	public int getOcenka() {
+		return ocenka;
 		
+	}
+	
+	public String getPredmet() {
+		return predmet;
+	}
+	
+	public int Najgolema(Subject x) {
+		if (this.ocenka > x.ocenka)
+			najgolema = this.ocenka;
+		return najgolema;
 	}
 }

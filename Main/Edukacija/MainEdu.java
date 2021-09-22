@@ -11,34 +11,61 @@ import java.util.Scanner;
 public class MainEdu {
 	public static void main(String[] args) throws IOException {
 
-		File file1 = new File("text.txt");
-		FileWriter fw = new FileWriter(file1);
-		PrintWriter pw = new PrintWriter(fw);
 		Scanner vnes = new Scanner(System.in);
 
-		Student a = new Student("Mario");
+		int x, y, z;
+		int najgolemMak = 0;
+		int najgolemMat = 0;
+		int najgolemIst = 0;
+		double proseMak = 0;
+		double proseMat = 0;
+		double proseIst = 0;
+		int zbirMak=0;
+		int zbirMat=0;
+	    int zbirIst=0;
+
+		Student a = new Student("Mari");
 		Student b = new Student("Pece");
-		Student c = new Student("Kocho");
+		Student c = new Student("Koch");
+
+		Student[] site = { a, b, c };
 		
-		Subject d = new Subject("Matematika");
-		Subject e = new Subject("Makedonski");
-		Subject f = new Subject("Istorija");
-		
-		Student[] site = {a,b,c};
-		Subject[] sitee = {d,e,f};
-		
-		for (int i=0; i<2 ; i++) {
-			int x = vnes.nextInt();
-			 
+		for (Student student : site) {
 			
+			System.out.println("Vnesi Ocenki za: "+ student.getStudent());
+			System.out.print("Makedonski: ");
+			x = vnes.nextInt();
+			System.out.print("Matematika: ");
+			y = vnes.nextInt();
+			System.out.print("Istorija  : ");
+			z = vnes.nextInt();
+			
+			student.addOcenka(x, y, z);
+		}
+
+		for (int i = 0; i < site.length; i++) {
+			System.out.println(site[i].getSubject());
+		}
+	
+		for (int i = 0; i < site.length; i++) {
+			if (site[i].getMakOcenka() > najgolemMak)
+				najgolemMak = site[i].getMakOcenka();
+			if (site[i].getMatOcenka() > najgolemMat)
+				najgolemMat = site[i].getMatOcenka();
+			if (site[i].getIstOcenka() > najgolemIst)
+				najgolemIst = site[i].getIstOcenka();
+			
+			zbirMak = zbirMak + site[i].getMakOcenka();
+			zbirMat = zbirMat + site[i].getMatOcenka();
+			zbirIst = zbirIst + site[i].getIstOcenka();
 		}
 		
-
-
+		proseMak = (double)zbirMak / (double)site.length;
+		proseMat = (double)zbirMat / (double)site.length;
+		proseIst = (double)zbirIst / (double)site.length;
 		
-		
-		
-		pw.close();
+		System.out.println("Prosek\n Mak: " + proseMak +" "+ "Mat: "+ proseMat+" "+"Ist: "+proseIst);
+		System.out.println("Najgolema\nMak: " +najgolemMak+" "+ "Mat: "+ najgolemMat+" "+"Ist: "+najgolemIst);
 
 	}
 }

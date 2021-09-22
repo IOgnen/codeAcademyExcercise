@@ -1,0 +1,8 @@
+username;password;email;roles
+adminot;pass;admin@ex.com;ADMIN,USER
+admindrug;pass;admindrug@ex.com;ADMIN,USER
+userot;pass;userot@ex.com;USER
+primer;pass;primer@ex.com;USER
+onaj;pass;onaj@webot.com;USER
+drugio;pass;drugio@ex.com;USER
+nekoj;pass;nekoj@webot.com;USER
