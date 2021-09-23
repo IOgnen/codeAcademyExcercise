@@ -1,18 +1,20 @@
 package UserData;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.Date;
 
 public class User {
 
-	String username;
-
-	String password;
-	String email;
-	String Roles;
+	private String username;
+	private String password;
+	private String email;
+	private String Roles;
+	private String data;
+	
+	private String name;
+	private String surname;
+	
 	Set<String> Role = new HashSet<String>();
 
 	public String getUsername() {
@@ -33,7 +35,30 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
+	public int getRoles() {
+		return Role.hashCode();
+	}
+	public void setRoles(String roles) {
+		this.Roles= roles;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return this.name;
+	}
+	public void setSurname(String surname) {
+		this.surname=surname;
+	}
+	public String getSurname() {
+		return this.surname;
+	}
+	public void setDate(String data) {
+		this.data=data;
+	}
+	public String getDate() {
+		return this.data.toString();
+	}
 	
 	public void setRoles(){
 		String pomoshna = this.Roles;
@@ -48,10 +73,10 @@ public class User {
 		
 	}
 	
-	
 	@Override
 	public String toString() {
-		return "User [username=" + username + ", password=" + password + ", email=" + email + ", Roles=" + Role + "]";
+		return "User [username=" + username + ", password=" + password + 
+				", email=" + email + ", Roles=" + Role + ", Name="+name+ ",Surname="+surname+",date="+ data + "]";
 	};
 	
 	
