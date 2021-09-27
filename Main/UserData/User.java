@@ -1,21 +1,17 @@
 package UserData;
 
-import java.util.HashSet;
+import java.time.ZonedDateTime;
 import java.util.Set;
-import java.util.Date;
 
 public class User {
 
 	private String username;
 	private String password;
 	private String email;
-	private String Roles;
-	private String data;
-	
-	private String name;
-	private String surname;
-	
-	Set<String> Role = new HashSet<String>();
+	private Set<Role> roles;
+	private ZonedDateTime createdOn = ZonedDateTime.now();	
+	private UserProfile userProfile;
+	private Integer points;
 
 	public String getUsername() {
 		return username;
@@ -35,49 +31,29 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public int getRoles() {
-		return Role.hashCode();
+	public Set<Role> getRoles() {
+		return roles;
 	}
-	public void setRoles(String roles) {
-		this.Roles= roles;
+	public ZonedDateTime getCreatedOn() {
+		return createdOn;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public User(Set<Role> roles) {
+		super();
+		this.roles = roles;
 	}
-	public String getName() {
-		return this.name;
+
+	public User(String username,String password, String email,Set<Role> role,UserProfile userProfile,Integer points) {
+		this.username = username;
+		this.password = password;
+		this.email = email;
+		this.roles = role;
+		this.userProfile=userProfile;
+		this.points = points;
 	}
-	public void setSurname(String surname) {
-		this.surname=surname;
-	}
-	public String getSurname() {
-		return this.surname;
-	}
-	public void setDate(String data) {
-		this.data=data;
-	}
-	public String getDate() {
-		return this.data.toString();
-	}
-	
-	public void setRoles(){
-		String pomoshna = this.Roles;
-		if (pomoshna.contains("ADMIN")&&(pomoshna.contains("USER"))) {
-			Role.add("ADMIN");
-			Role.add("USER");
-		}else if (pomoshna.contains("ADMIN")) {
-			Role.add("ADMIN");
-		}else if (pomoshna.contains("USER")){
-			Role.add("USER");
-		}
-		
-	}
-	
 	@Override
 	public String toString() {
-		return "User [username=" + username + ", password=" + password + 
-				", email=" + email + ", Roles=" + Role + ", Name="+name+ ",Surname="+surname+",date="+ data + "]";
-	};
-	
+		return "User [username=" + username + ", password=" + password + ", email=" + email + ", roles=" + roles
+				+ ", userProfile=" + userProfile + ", points=" + points + "]";
+	}	
 	
 }
