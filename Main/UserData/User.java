@@ -31,8 +31,8 @@ public class User {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Set<Role> getRoles() {
-		return roles;
+	public String getRoles() {
+		return roles.toString();
 	}
 	public ZonedDateTime getCreatedOn() {
 		return createdOn;
@@ -40,6 +40,10 @@ public class User {
 	public User(Set<Role> roles) {
 		super();
 		this.roles = roles;
+	}
+	
+	public UserProfile getUserProfile() {
+		return this.userProfile;
 	}
 
 	public User(String username,String password, String email,Set<Role> role,UserProfile userProfile,Integer points) {

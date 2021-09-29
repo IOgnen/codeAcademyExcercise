@@ -33,8 +33,8 @@ public class UserProfile {
 		this.surname = surname;
 	}
 
-	public LocalDate getBirthDate() {
-		return birthDate;
+	public String getBirthDate() {
+		return birthDate.toString();
 	}
 
 	public void setBirthDate(LocalDate birthDate) {

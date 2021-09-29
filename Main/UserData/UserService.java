@@ -25,16 +25,15 @@ public class UserService {
 			for (int i = 1; i < lines.size(); i++) {
 				String[] row = lines.get(i).split(";");
 
-				Set<Role> roles = new HashSet<>();
-
 				DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 				LocalDate x = LocalDate.now();
+
+				Set<Role> roles = new HashSet<>();
 				Gender y;
 				Integer z;
-				
-				try {
 
-					x = LocalDate.parse(row[6],myFormatObj);
+				try {
+					x = LocalDate.parse(row[6], myFormatObj);
 				} catch (Exception e) {
 					x = null;
 				}
@@ -87,7 +86,56 @@ public class UserService {
 				return i;
 			}
 		}
-	return null;
+		return null;
 	}
 
-}
+	public User getByEmail(String email) {
+
+		for (User i : users) {
+
+			if (i.getEmail().equals(email)) {
+				return i;
+			}
+		}
+		return null;
+	}
+
+	public List<User> searchByRole(String roles) {
+
+		List<User> searchResult = new ArrayList<>();
+
+		for (User i : users) {
+			if (i.getRoles().contains(roles)) {
+				searchResult.add(i);
+			}
+		}
+
+		return searchResult;
+	}
+
+//	public List<User> searchByYear(String year) {
+//      NE TI RABOTI!!!!
+//		List<User> searchResult = new ArrayList<>();
+//
+//		for (User i : users) {
+//			if (i.getUserProfile().getBirthDate().contains(year)) {
+//				searchResult.add(i);
+//			}
+//		}
+//		return searchResult;
+//
+//	}
+
+	public List<User> searchByEmailDomain(String domain){
+		
+		List<User> searchResult = new ArrayList<>();
+				
+		for (User i: users) {
+				if(i.getEmail().contains(domain)) {
+					searchResult.add(i);
+				}
+			}
+		return searchResult;
+		}
+	
+	}

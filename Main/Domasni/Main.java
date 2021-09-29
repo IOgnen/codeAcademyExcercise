@@ -9,6 +9,12 @@ public class Main {
 		
 		System.out.println(it);
 		
+		String a = "Pece@koj.com";
+		
+		String b = "koj.com";
+		
+		System.out.println(a.contains(b));
+		
 //		Dog maltese = new Dog();
 //		
 //		maltese.setBreed("JackRusel");
