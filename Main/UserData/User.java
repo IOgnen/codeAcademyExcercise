@@ -45,6 +45,10 @@ public class User {
 	public UserProfile getUserProfile() {
 		return this.userProfile;
 	}
+	
+	public Integer getPoints() {
+		return this.points;
+	}
 
 	public User(String username,String password, String email,Set<Role> role,UserProfile userProfile,Integer points) {
 		this.username = username;

@@ -11,7 +11,7 @@ public class MainUs {
 		String csvPath = "Main\\CSV.csv";
 
 		UserService juzer = new UserService(csvPath);
-		User x;
+		
 		List<User> y = new ArrayList<>();
 		
 		juzer.PrintUsers();

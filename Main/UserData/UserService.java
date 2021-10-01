@@ -113,29 +113,60 @@ public class UserService {
 		return searchResult;
 	}
 
-//	public List<User> searchByYear(String year) {
-//      NE TI RABOTI!!!!
-//		List<User> searchResult = new ArrayList<>();
-//
-//		for (User i : users) {
-//			if (i.getUserProfile().getBirthDate().contains(year)) {
-//				searchResult.add(i);
-//			}
-//		}
-//		return searchResult;
-//
-//	}
+	public List<User> searchByYear(String year) {
 
-	public List<User> searchByEmailDomain(String domain){
-		
 		List<User> searchResult = new ArrayList<>();
-				
-		for (User i: users) {
-				if(i.getEmail().contains(domain)) {
-					searchResult.add(i);
+
+		for (User i : users) {
+			if (i.getUserProfile() != null) {
+				if (i.getUserProfile().getBirthDate() != null) {
+					String theYear = i.getUserProfile().getBirthDate().toString();
+					if (theYear.contains(year)) {
+						searchResult.add(i);
+					}
 				}
+
 			}
-		return searchResult;
 		}
-	
+		return searchResult;
+
 	}
+
+	public List<User> searchByEmailDomain(String domain) {
+
+		List<User> searchResult = new ArrayList<>();
+
+		for (User i : users) {
+			if (i.getEmail().contains(domain)) {
+				searchResult.add(i);
+			}
+		}
+		return searchResult;
+	}
+
+	public List<User> searchByNameSurname(String name) {
+
+		List<User> searchResult = new ArrayList<>();
+
+		for (User i : users) {
+			String fullname = i.getUserProfile().getName() + i.getUserProfile().getSurname();
+			if (fullname.contains(name))
+				searchResult.add(i);
+		}
+		return searchResult;
+	}
+
+	public List<User> searchByPoints(Integer points) {
+
+		List<User> searchResult = new ArrayList<>();
+
+		for (User i : users) {
+			if (i.getPoints().equals(points)) {
+
+			}
+		}
+
+		return searchResult;
+
+	}
+}
