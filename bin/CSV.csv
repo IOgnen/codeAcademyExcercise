@@ -1,0 +1,8 @@
+username;password;email;roles;firstName;lastName;birthDate;gender;website;points
+"adminot;pass;admin@ex.com;ADMIN,USER;;;18-09-1945;;;"
+"admindrug;pass;admindrug@ex.com;ADMIN,USER;Nekojsi;Choek;16-05-1990;MALE;admin.com;"
+userot;pass;userot@ex.com;USER;Userot;Toresu;;;;20
+primer;pass;primer@ex.com;USER;Primer;;03-03-1985;FEMALE;;0
+onaj;pass;onaj@webot.com;USER;Onaj;Toj;;;onaj.com;45
+drugio;pass;drugio@ex.com;USER;Drugio;Oigurd;;MALE;;82
+nekoj;pass;nekoj@webot.com;USER;;;13-04-1995;;;0
