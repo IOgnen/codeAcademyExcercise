@@ -16,7 +16,7 @@ public class MainUs {
 		
 		juzer.PrintUsers();
 		
-		y = juzer.searchByYear("1995");
+		y = juzer.searchByRole("ADMIN");
 		System.out.println(y.toString());
 		
 	}

@@ -1,4 +1,4 @@
-package main;
+package Mini;
 
 import java.util.Arrays;
 import java.util.Scanner;

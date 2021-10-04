@@ -50,6 +50,7 @@ public class UserService {
 					z = null;
 				}
 
+
 				if (row[4].equals(""))
 					row[4] = null;
 				if (row[5].equals(""))
