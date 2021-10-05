@@ -3,6 +3,7 @@ package Besilka;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.Random;
 
 public class Besilka {
 	public int zivoti;
@@ -15,14 +16,20 @@ public class Besilka {
 	public void start() {
 		Scanner vnes = new Scanner(System.in);
 
+		Random r = new Random();
+
 		System.out.println("Zivoti: 10");
 
 		Besilka besilka = new Besilka();
 
 		besilka.setZivoti(10);
 
-		System.out.print("Vnesete zbor: ");
-		zborot = vnes.next();
+//		System.out.print("Vnesete zbor: ");
+//		zborot = vnes.next();
+
+		String listaZboroj[] = { "kompjuter", "televizor", "teletabis", "monitor", "terminator", "tastatura" };
+
+		zborot = listaZboroj[r.nextInt(6)];
 
 		besilka.setZbor(zborot);
 		besilka.novZbor();
@@ -82,7 +89,6 @@ public class Besilka {
 				}
 
 			}
-			System.out.println("-----------------------------------------------------");
 			System.out.print("[");
 			for (Character x : nov) {
 				System.out.print(x);

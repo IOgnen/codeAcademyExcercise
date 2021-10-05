@@ -11,13 +11,13 @@ public class MainUs {
 		String csvPath = "Main\\CSV.csv";
 
 		UserService juzer = new UserService(csvPath);
-		
+
 		List<User> y = new ArrayList<>();
-		
+
 		juzer.PrintUsers();
-		
-		y = juzer.searchByRole("ADMIN");
+
+		y = juzer.searchByGender(Gender.MALE);
 		System.out.println(y.toString());
-		
+
 	}
 }

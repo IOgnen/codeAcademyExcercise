@@ -20,15 +20,15 @@ public class MainArr {
 		List<String> nizaZborovi1 = Arrays.asList(nizaZbor1);
 
 		brojSamoglaski(nizaZborovi);
-//		System.out.println(exc7(nizaBroj));
-//		System.out.println(exc6(nizaInteger));
-//		System.out.println(exc5(nizaBroj));
-//		System.out.println(exc4(nizaInteger));
-//		System.out.println(exc12(nizaInteger));
-//		System.out.println(exc13(nizaZborovi));
-//		System.out.println(exc14(nizaZborovi, nizaZborovi1));
-//		System.out.println(exc16(nizaInteger));
-//		System.out.println(exc22(nizaInteger));
+		System.out.println(exc7(nizaBroj));
+		System.out.println(exc6(nizaInteger));
+		System.out.println(exc5(nizaBroj));
+		System.out.println(exc4(nizaInteger));
+		System.out.println(exc12(nizaInteger));
+		System.out.println(exc13(nizaZborovi));
+		System.out.println(exc14(nizaZborovi, nizaZborovi1));
+		System.out.println(exc16(nizaInteger));
+		exc22(nizaInteger);
 
 	}
 

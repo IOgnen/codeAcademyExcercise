@@ -1,7 +1,6 @@
 package UserData;
 
 import java.time.LocalDate;
-import java.util.Set;
 
 public class UserProfile {
 	
@@ -33,18 +32,28 @@ public class UserProfile {
 		this.surname = surname;
 	}
 
-	public String getBirthDate() {
-		return birthDate.toString();
+	public LocalDate getBirthDate() {
+		return birthDate;
 	}
 
 	public void setBirthDate(LocalDate birthDate) {
 		this.birthDate = birthDate;
 	}
 
+	public String getBirthDateString() {
+		if(birthDate != null) {
+			return birthDate.toString();
+		}
+		return null;
+	}
+	
+	public Gender getGender() {
+		return this.gender;
+	}
 
 	@Override
 	public String toString() {
-		return "UserProfile [name=" + name + ", surname=" + surname + ", birthDate=" + birthDate + ", gender=" + gender
+		return "UserProfile [name=" + name + ", surname=" + surname + ", birthDate=" + getBirthDate() + ", gender=" + gender
 				+ "]";
 	}
 

@@ -19,7 +19,7 @@ public class MainPlo {
 		
 		
 		forms.forEach(forma -> {
-			System.out.println(forma.getClassName() + " so strani: " + forma.getSides() + " e: "
+			System.out.println(forma.getClassName() + " so strani: " + forma.getSides() + " e so Ploshtina: "
 					+ forma.Ploshtina() + " a Perimetarot e: " + forma.Perimetar());
 		});
 		

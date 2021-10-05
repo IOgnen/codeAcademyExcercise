@@ -1,16 +1,14 @@
 package UserData;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.sql.Date;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Scanner;
+import java.util.Objects;
 import java.util.Set;
 
 public class UserService {
@@ -19,10 +17,20 @@ public class UserService {
 
 	public UserService(String csvPath) {
 
-		try {
-			List<String> lines = Files.readAllLines(Path.of(csvPath));
+//		BuffreaReader za chitanje od file
+		try (BufferedReader br = new BufferedReader(new FileReader(csvPath));) {
+
+			List<String> lines = new ArrayList<>();
+			String line;
+
+			while ((line = br.readLine()) != null) {
+
+				lines.add(line);
+
+			}
 
 			for (int i = 1; i < lines.size(); i++) {
+
 				String[] row = lines.get(i).split(";");
 
 				DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
@@ -49,7 +57,6 @@ public class UserService {
 				} catch (Exception e) {
 					z = null;
 				}
-
 
 				if (row[4].equals(""))
 					row[4] = null;
@@ -121,12 +128,29 @@ public class UserService {
 		for (User i : users) {
 			if (i.getUserProfile() != null) {
 				if (i.getUserProfile().getBirthDate() != null) {
-					String theYear = i.getUserProfile().getBirthDate().toString();
+					String theYear = i.getUserProfile().getBirthDateString();
 					if (theYear.contains(year)) {
 						searchResult.add(i);
 					}
 				}
 
+			}
+		}
+		return searchResult;
+
+	}
+
+	public List<User> searchByGender(Gender gender) {
+
+		List<User> searchResult = new ArrayList<>();
+
+		for (User i : users) {
+			if (i.getUserProfile() != null) {
+				if (i.getUserProfile().getGender() != null) {
+					if (i.getUserProfile().getGender().equals(gender)) {
+						searchResult.add(i);
+					}
+				}
 			}
 		}
 		return searchResult;
