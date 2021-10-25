@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class MainUs {
 	public static void main(String[] args) throws IOException {
 
-		String csvPath = "Main\\CSV.csv";
+		String csvPath = "Main\\CSV_User.csv";
 
 		UserService juzer = new UserService(csvPath);
 

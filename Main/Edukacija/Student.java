@@ -4,47 +4,64 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Student {
-	
-	Subject Mak = new Subject();
-	Subject Mat = new Subject();
-	Subject Ist = new Subject();
-	
+
+	public Integer index;
 	public String name;
-	
-	public Student(String name) {
-		this.name=name;
+	public String surname;
+	public City city;
+	public List<Subject> subject = new ArrayList<>();
+
+	public Student(Integer index, String name, String surname) {
+		this.index = index;
+		this.surname = surname;
+		this.name = name;
 	}
 	
-	public String getStudent() {
-		return this.name;
-	}
-	
-	public void addOcenka(int x,int y, int z) {
-		Mak.setOcenka(x);
-		Mat.setOcenka(y);
-		Ist.setOcenka(z);
-	}
-	
-	public String getSubject(){
-		return this.name +" " 
-						+ Mak.getPredmet() +" "
-						+ Mak.getOcenka() +" "
-						+ Mat.getPredmet() + " "
-						+ Mat.getOcenka() + " "
-						+ Ist.getPredmet() + " "
-						+ Ist.getOcenka(); 
-		
+	public void initData() {
+		subject.add(new Subject("Makedonski",7));
+		subject.add(new Subject("Matematika",8));
+		subject.add(new Subject("Fizika",9));
+		subject.add(new Subject("IT",5));
 	}
 
-	public int getMakOcenka() {
-		return Mak.getOcenka();
+	public void setIndex(Integer index) {
+		this.index = index;
 	}
-	public int getMatOcenka() {
-		return Mat.getOcenka();
+
+	public Integer getIndex() {
+		return index;
 	}
-	public int getIstOcenka() {
-		return Ist.getOcenka();
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setSurname(String surname) {
+		this.surname = surname;
+	}
+
+	public String getSurname() {
+		return this.surname;
+	}
+
+	public void setCity(City city) {
+		this.city = city;
+	}
+
+	public City getCity() {
+		return this.city;
 	}
 	
+	
+
+	@Override
+	public String toString() {
+		return "Student [index=" + index + ", name=" + name + ", surname=" + surname + ", city=" + city + ", subject="
+				+ subject + "]" + "\n";
+	}
 
 }

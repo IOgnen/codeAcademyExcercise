@@ -33,6 +33,8 @@ public class UserService {
 
 				String[] row = lines.get(i).split(";");
 
+				System.out.print(row[0]);
+				
 				DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 				LocalDate x = LocalDate.now();
 
