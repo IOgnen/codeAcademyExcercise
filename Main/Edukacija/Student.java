@@ -5,23 +5,27 @@ import java.util.List;
 
 public class Student {
 
-	public Integer index;
-	public String name;
-	public String surname;
-	public City city;
-	public List<Subject> subject = new ArrayList<>();
+	private Integer index;
+	private String name;
+	private String surname;
+	private City city;
+	private ArrayList<Subject> subject = new ArrayList<>();
 
-	public Student(Integer index, String name, String surname) {
+	public Student(Integer index, String name, String surname,City city,ArrayList<Subject> subject) {
+		super();
 		this.index = index;
 		this.surname = surname;
 		this.name = name;
+		this.city = city;
+		this.subject = subject;
 	}
 	
-	public void initData() {
-		subject.add(new Subject("Makedonski",7));
-		subject.add(new Subject("Matematika",8));
-		subject.add(new Subject("Fizika",9));
-		subject.add(new Subject("IT",5));
+	public ArrayList<Subject> getSubject() {
+		return subject;
+	}
+
+	public void setSubject(ArrayList<Subject> subject) {
+		this.subject = subject;
 	}
 
 	public void setIndex(Integer index) {
@@ -55,6 +59,28 @@ public class Student {
 	public City getCity() {
 		return this.city;
 	}
+	
+	public Subject getMakedonski() {
+		
+		return subject.get(1);
+		
+	}
+	public Subject getMatematika() {
+		
+		return subject.get(0);
+		
+	}
+	public Subject getFizika() {
+		
+		return subject.get(3);
+		
+	}
+	public Subject getIstorija() {
+		
+		return subject.get(2);
+		
+	}
+
 	
 	
 
