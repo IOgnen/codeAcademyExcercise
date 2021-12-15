@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<student>
+
+	<name>Aleksandar</name>
+	<surname>Acev</surname>
+	<index>1234/2021</index>
+	<gpa>9.0</gpa>
+	
+	<address>
+		
+		<street>Partizanska</street>
+		<number>20</number>
+		<city>Skopje</city>
+		
+	</address>
+	
+	<phone>
+	
+		<mobile>071123456</mobile>
+		<work>034654321</work>
+		<home>078458962</home>
+	
+	</phone>
+	
+	<emails>aleksandar@email.com</emails>
+	<emails>a.acev@email.com</emails>
+	<emails>acev@email.com</emails>
+	
+	<subjects>
+		<subject>
+			<name>Matematika1</name>
+			<schedule>pon,sreda,petok</schedule>
+			<books>
+				<book>
+					<name>Mat 1</name>
+				</book>
+			</books>
+		</subject>
+	</subjects>
+
+
+	<grades>
+		<grade>
+			<subject>Matematika</subject>
+		</grade>
+	</grades>
+</student>

@@ -9,9 +9,10 @@ public class Student {
 	private String name;
 	private String surname;
 	private City city;
-	private ArrayList<Subject> subject = new ArrayList<>();
+	private List<Subject> subject = new ArrayList<>();
+	
 
-	public Student(Integer index, String name, String surname,City city,ArrayList<Subject> subject) {
+	public Student(Integer index, String name, String surname,City city,List<Subject> subject) {
 		super();
 		this.index = index;
 		this.surname = surname;
@@ -20,11 +21,11 @@ public class Student {
 		this.subject = subject;
 	}
 	
-	public ArrayList<Subject> getSubject() {
+	public List<Subject> getSubject() {
 		return subject;
 	}
 
-	public void setSubject(ArrayList<Subject> subject) {
+	public void setSubject(List<Subject> subject) {
 		this.subject = subject;
 	}
 

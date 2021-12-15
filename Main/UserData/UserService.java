@@ -22,7 +22,7 @@ public class UserService {
 
 			List<String> lines = new ArrayList<>();
 			String line;
-
+			
 			while ((line = br.readLine()) != null) {
 
 				lines.add(line);
@@ -196,4 +196,11 @@ public class UserService {
 		return searchResult;
 
 	}
+
+	public void addToDb(List<User> users) {
+		
+		
+		
+	}
+
 }

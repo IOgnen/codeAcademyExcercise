@@ -2,22 +2,35 @@ package Edukacija;
 
 public class Subject {
 	
-	SubjectNames predmet;
+	private SubjectNames predmet;
 	private Integer ocenka;
 	private boolean polozen;
-	
+	private Profesor profesor;
+
+
+
 	@Override
 	public String toString() {
-		return "Subject [predmet=" + predmet + ", ocenka=" + ocenka + ", polozen=" + polozen + "]";
+		return "Subject [predmet=" + predmet + ", ocenka=" + ocenka + ", polozen=" + polozen + ", profesor=" + profesor
+				+ "]";
 	}
 
-	public Subject(SubjectNames predmet,Integer ocenka) {
+	public Subject(SubjectNames predmet,Integer ocenka,Profesor profesor) {
 		this.predmet = predmet;
 		this.ocenka = ocenka;
 		if(ocenka>5) 
 			polozen = true;
 		else
 			polozen = false;
+		this.profesor=profesor;
+	}
+	
+	public Profesor getProfesor() {
+		return profesor;
+	}
+
+	public void setProfesor(Profesor profesor) {
+		this.profesor = profesor;
 	}
 	
 	public void setOcenka(Integer ocenka) {
